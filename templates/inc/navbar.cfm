@@ -12,6 +12,7 @@
 					#HTMLEditFormat($.siteConfig('site'))#
 				</a>
 				
+				<!---
 				<cfif $.currentUser().isLoggedIn()>
 					<a id="logout" class="btn" href="./?doaction=logout">Logout</a>
 				<cfelse>
@@ -24,14 +25,16 @@
 						<button type="submit" class="btn" value="#htmlEditFormat($.rbKey('user.login'))#">Sign in</button>
 					</form>
 				</cfif>
+				--->
+				
 				
 				<div class="nav-collapse collapse">
 					<cf_CacheOMatic key="dspPrimaryNav#$.content('contentid')#">
 						#$.dspPrimaryNav(
-							viewDepth=1,
+							viewDepth=0,
 							id='navPrimary',
 							class='nav',
-							displayHome='Never',
+							displayHome='Always',
 							closePortals=false,
 							showCurrentChildrenOnly=false,
 							ulTopClass='nav',
